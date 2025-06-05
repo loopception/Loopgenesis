@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akash Kumar Chatterjee | Portfolio</title>
+  <style>
+    :root {
+      --primary: #6c5ce7;
+      --accent: #00cec9;
+      --dark: #2d3436;
+      --light: #f5f6fa;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--dark);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    section {
+      padding: 100px 20px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    #home {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding-top: 140px;
+    }
+    #home h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+    }
+    #home h1 span {
+      color: var(--accent);
+    }
+    #home p {
+      font-size: 1.2em;
+      max-width: 750px;
+      margin: auto;
+    }
+    .highlight {
+      color: var(--accent);
+      font-weight: bold;
+    }
+    section h2 {
+      font-size: 2.2em;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+      border-left: 5px solid var(--primary);
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      background: #f0f0ff;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    button {
+      padding: 12px;
+      background: var(--primary);
+      border: none;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background: var(--dark);
+      color: white;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--dark);
+        width: 100%;
+        display: none;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">AkashPortfolio</div>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Hello, I'm <span class="highlight">Akash Kumar Chatterjee</span></h1>
+    <p>
+      I'm a passionate <span class="highlight">developer and robotics enthusiast</span> who loves blending creativity with engineering to solve real-world challenges.
+      My goal is to create tech solutions that are smart, scalable, and meaningful.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <!-- Weather App -->
+      <div class="card">
+        <h3>Weather App</h3>
+        <p>This responsive app fetches and displays real-time weather data from the OpenWeather API. Built with JavaScript, HTML, and CSS, it shows city forecasts and weather icons dynamically.</p>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Weather App Screenshot" />
+      </div>
+
+      <!-- Personal Blog -->
+      <div class="card">
+        <h3>Personal Blog</h3>
+        <p>A clean, mobile-friendly blog site that uses semantic HTML and styled CSS. It’s fully responsive and designed to help users showcase content with ease and clarity.</p>
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Personal Blog Screenshot" />
+      </div>
+
+      <!-- Smart Home Automation -->
+      <div class="card">
+        <h3>Smart Home Automation</h3>
+        <p>An IoT-based smart home controller using NodeMCU. Allows real-time control of lights and fans using a dashboard interface, along with temperature monitoring.</p>
+        <img src="https://images.unsplash.com/photo-1516900557547-04d5a5b1cc5c?auto=format&fit=crop&w=800&q=80" alt="Smart Home Automation Dashboard" />
+      </div>
+
+      <!-- Additional projects if any videos were embedded, replace them here with images -->
+      <!-- For example: -->
+      <div class="card">
+        <h3>Robotics Navigation System</h3>
+        <p>A project on autonomous robot navigation using sensor fusion and path planning algorithms to navigate complex environments.</p>
+        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80" alt="Robotics Navigation" />
+      </div>
+
+      <div class="card">
+        <h3>Machine Learning Model</h3>
+        <p>Developed a predictive model to analyze data trends and make accurate forecasts using Python and Scikit-learn.</p>
+        <img src="https://images.unsplash.com/photo-1531497865144-160e0c08e97b?auto=format&fit=crop&w=800&q=80" alt="Machine Learning Model" />
+      </div>
+
+    </div>
+  </section>
+
+  <section id="goals">
+    <h2>Goals</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Master Front-End Development</h3>
+        <p>Continue to refine my skills in HTML, CSS, JavaScript, and React. Aim to build sleek, accessible, and interactive user experiences that are mobile-first and scalable.</p>
+      </div>
+      <div class="card">
+        <h3>Deepen Python Expertise</h3>
+        <p>Explore Python for automation, web scraping, data visualization, and machine learning. Work with libraries like pandas, matplotlib, and TensorFlow.</p>
+      </div>
+      <div class="card">
+        <h3>Contribute to Open Source</h3>
+        <p>Give back to the tech community by contributing to open-source projects on GitHub — from fixing bugs and writing docs to adding new features.</p>
+      </div>
+      <div class="card">
+        <h3>Build Full-Stack Applications</h3>
+        <p>Design and deploy full-stack web apps using MongoDB, Express, React, and Node.js. Integrate user authentication, CRUD operations, and cloud deployment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="max-width:700px; margin:auto; font-size:1.1em; text-align:center;">
+      I’m a self-taught developer who loves working on projects that bridge hardware and software.
+      Whether it’s a robot that follows a path or a web app that solves a problem, I enjoy the challenge of learning and building every day.
+      With a foundation in programming and electronics, I aim to grow into a versatile engineer who creates impactful technology.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 AkashPortfolio — Made with 💜 using pure HTML & CSS
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+
+    document.querySelectorAll('nav ul li a').forEach(link =>
+      link.addEventListener('click', () => {
+        document.getElementById('menu').classList.remove('show');
+      })
+    );
+  </script>
+
+</body>
+</html>
